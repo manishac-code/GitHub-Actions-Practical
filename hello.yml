@@ -1,10 +1,15 @@
-name: My First Workflow
+name: Windows Workflow
+
 on: push
+
 jobs:
-  first-job:
-    runs-on: ubuntu-latest
+  demo:
+    runs-on: windows-latest
+
     steps:
-      - name: Display Welcome Message
-        run: echo "Hello! GitHub Actions is Working"
-      - name: Display Current Date
-        run: date
+      - name: Welcome Message
+        run: echo "Hello from Windows Runner!"
+
+      - name: Check Operating System
+        run: systeminfo
+        shell: cmd
